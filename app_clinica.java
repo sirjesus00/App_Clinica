@@ -35,7 +35,7 @@ public class app_clinica {
         String nombreStr = JOptionPane.showInputDialog(null, "Nombre paciente");
         String epsStr = JOptionPane.showInputDialog(null, "EPS paciente");
         pacientes[posicionInt] = new cls_paciente(codigoInt, nombreStr, contactoInt, epsStr);
-        posicionInt = +1;
+        posicionInt +=1;
         JOptionPane.showMessageDialog(null, "Paciente registrado con exito", "Registrar",
                 JOptionPane.INFORMATION_MESSAGE);
     }
@@ -52,8 +52,7 @@ public class app_clinica {
 
         }
         if (swBln == false) {
-            JOptionPane.showInputDialog(null, "No se encontraron datos asociados", "Consulta",
-                    JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showInputDialog(null, "No se encontraron datos asociados", "Consulta",JOptionPane.INFORMATION_MESSAGE);
         } else {
             JOptionPane.showMessageDialog(null,"Codigo: " +pacientes[posInt].getCodigoInt()+"\nContacto: " +pacientes[posInt].getContactoInt()+"\nNombre: "+pacientes[posInt].getNombreStr()+"\nEps: "+pacientes[posInt].getEpsStr());
                     
